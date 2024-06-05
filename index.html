@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        .container1 {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: black;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(to right, #ff0000, #0000ff);
+            color: black;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: white;
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        p {
+            color: white;
+            font-size: 1.1em;
+        }
+
+        .menu {
+            position: absolute;
+            top: 10px;
+            right: -250px; /* Initially off the screen */
+            transition: right 0.3s;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            border-radius: 0 0 5px 5px;
+        }
+
+        .menu a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            margin-bottom: 5px;
+        }
+
+        .menu-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+  <div class="menu">
+      <p>Menu</p>
+      <hr>
+        <a href="index.html">Start</a>
+        <a href="about.html">Über uns</a>
+        <a href="support.html">Kontakt</a>
+    </div>
+
+    <div class="menu-btn" onclick="toggleMenu()">Menü</div>
+
+    <div class="container">
+        <h1>Willkommen auf meiner Website</h1>
+        <p>Viel Spaß auf meiner Website</p>
+    </div>
+
+    <div class="container1">
+        <h1>Impressum</h1>
+        <p>Lessingschulen, Stuttgart, Zuckerfabrik 7 </p>
+        <hr>
+        <p>Benjamin Bisco</p>
+        <hr>
+        <p>benni.desings@gmail.com</p>
+        <hr>
+        <a href="support.html" style="color: white;">Kontakt</a>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.querySelector('.menu');
+            if (menu.style.right === '-250px') {
+                menu.style.right = '10px';
+            } else {
+                menu.style.right = '-250px';
+            }
+        }
+    </script>
+</body>
+
+</html>
